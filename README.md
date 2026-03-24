@@ -16,3 +16,8 @@ Proiect Anul 3 pentru la Programare Web - Sem I
 
 # Screenshots
 ![App Screenshot](https://i.imgur.com/lXysQmI.png)
+
+# Instructiuni
+
+Install XAMPP
+Put the folder named Proiect-PW in htdocs of XAMPP , then do npm run dev , open xampp and activate Apache and Sql
