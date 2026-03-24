@@ -13,3 +13,6 @@ Proiect Anul 3 pentru la Programare Web - Sem I
 -GIT  
 -PHP  
 -MySQL 
+
+# Screenshots
+![App Screenshot](https://i.imgur.com/lXysQmI.png)
