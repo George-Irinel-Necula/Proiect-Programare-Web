@@ -9,9 +9,7 @@ Proiect Anul 3 pentru la Programare Web - Sem I
 -JavaScript  
 -Vite  
 -TailWind CSS  
--FlyonUI  
+-FlyonUI
 -GIT  
--NPM  
 -PHP  
--MySQL  
--XAMPP  
+-MySQL 
