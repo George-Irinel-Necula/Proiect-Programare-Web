@@ -29,7 +29,7 @@ class FeaturedProduct
                 </div>
                 <div class="card-actions justify-end mt-2">
                     <button class="btn btn-primary btn-outline btn-sm sm:btn-md">Vezi detalii</button>
-                    <button class="btn btn-secondary btn-sm sm:btn-md">Cumpara</button>
+                    <button class="btn btn-secondary btn-sm sm:btn-md"><a href="./store.php">Cumpara</a></button>
                 </div>
             </div>
         </div>';

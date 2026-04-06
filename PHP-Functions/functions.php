@@ -44,27 +44,6 @@ function emailExists($conn,$email){
     }
 }
 
-function userNameExists($conn, $username)
-{
-    $sql = "SELECT * FROM users WHERE username = ?";
-    $stmt = mysqli_stmt_init($conn);
-    if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("location: ../formular.php?error=stmt_error");
-        exit();
-    }
-    mysqli_stmt_bind_param($stmt, "s", $username);
-    mysqli_stmt_execute($stmt);
-
-    $result = mysqli_stmt_get_result($stmt);
-    $row = mysqli_fetch_assoc($result);
-    mysqli_stmt_close($stmt);
-
-    if ($row) {
-        return $row;
-    } else {
-        return false;
-    }
-}
 
 function userNameExists($conn, $username){
     $sql = "SELECT * FROM users WHERE username = ?";
@@ -86,8 +65,6 @@ function userNameExists($conn, $username){
         return false;
     }
 }
-
-
 
 
 function createUser($conn,$username,$email,$password,$password_repeat){
@@ -130,50 +107,6 @@ function logInUser($conn,$email,$password){
     }
 }
 
-function updateUserInfo($conn, $newEmail, $newUsername)
-{
-    session_start();
-    $currentEmail = $_SESSION['email'];
-
-    $sql = "UPDATE users SET email = ? , username = ? WHERE email = ?";
-    $stmt = mysqli_stmt_init($conn);
-    if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("location: ../profile.php?error=stmt_error");
-        exit();
-    }
-
-    mysqli_stmt_bind_param($stmt, "sss", $newEmail, $newUsername, $currentEmail);
-    mysqli_stmt_execute($stmt);
-    mysqli_stmt_close($stmt);
-
-    $_SESSION['username'] = $newUsername;
-    $_SESSION['email'] = $newEmail;
-
-    header("location: ../profile.php?error=none");
-    exit();
-}
-
-function updateUserPassword($conn, $newPassword)
-{
-    session_start();
-    $email = $_SESSION['email'];
-
-    $sql = "UPDATE users SET password = ? WHERE email = ?";
-    $stmt = mysqli_stmt_init($conn);
-    if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("location: ../profile.php?error=stmt_error");
-        exit();
-    }
-
-    $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
-
-    mysqli_stmt_bind_param($stmt, "ss", $hashedPassword, $email);
-    mysqli_stmt_execute($stmt);
-    mysqli_stmt_close($stmt);
-
-    header("location: ../profile.php?error=none");
-    exit();
-}
 
 function updateUserInfo($conn, $newEmail, $newUsername) {
     session_start();
