@@ -12,7 +12,7 @@ export default defineConfig({
     strictPort: true,
     cors: true,
     proxy: {
-      '/Proiect-PW': {
+      '/Proiect-ECom': {
         target: 'http://localhost',
         changeOrigin: true,
       }
