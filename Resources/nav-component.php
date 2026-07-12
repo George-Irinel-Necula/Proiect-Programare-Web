@@ -30,7 +30,7 @@ session_start();
           </ul>
         </div>
       <?php
-      if($pageName == "index" || $pageName == "store"){
+      if($pageName == "index" || $pageName == "store"|| $pageName == "cart"|| $pageName == "order"){
         echo '';
 
         if(!isset($_SESSION["email"])){
@@ -38,6 +38,7 @@ session_start();
             <svg class="icon-[tabler--login-2] size-6"></svg>
             <span class="hidden sm:inline">Logare</span>
           </a>';
+          
         } else {
           echo '<div class="dropdown relative hidden md:inline-flex">
           <button id="dropdown-default" type="button" class="dropdown-toggle btn btn-primary" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
@@ -47,11 +48,15 @@ session_start();
           </button>
           <ul class="dropdown-menu dropdown-open:opacity-100 hidden min-w-60" role="menu" aria-orientation="vertical" aria-labelledby="scope-dropdown-nested">
             <li><a class="dropdown-item" href="./profile.php"><span class="icon-[tabler--pencil] size-6"></span>Edit profile</a></li>
+            <li><a class="dropdown-item" href="./orders.php"><span class="icon-[tabler--package] size-6"></span>Comenzile mele</a></li>
             <li><a class="dropdown-item" href="./formular.php"><span class="icon-[tabler--award] size-6"></span>Concurs</a></li>
             <div class="divider"></div>  
             <li><a class="dropdown-item bg-error w-full" href="./PHP-Functions/logout.php " id="logout"><span class="icon-[tabler--login] size-6"></span>Log Out</a></li>
           </ul>
-        </div>';
+        </div>
+        <a class="btn btn-primary hidden md:flex" href="./cart.php">
+            <svg class="icon-[tabler--garden-cart] size-6"></svg>
+          </a>';
         }
 
         echo '<div class="dropdown relative inline-flex md:hidden">
@@ -72,6 +77,7 @@ session_start();
               </button>
               <ul class="dropdown-menu dropdown-open:opacity-100 hidden min-w-60" role="menu" aria-orientation="vertical" aria-labelledby="scope-dropdown-nested">
                 <li><a class="dropdown-item" href="../profile.php"><span class="icon-[tabler--pencil] size-6"></span>Edit profile</a></li>
+                 <li><a class="dropdown-item" href="./orders.php"><span class="icon-[tabler--package] size-6"></span>Comenzile mele</a></li>
                  <li><a class="dropdown-item" href="./formular.php"><span class="icon-[tabler--award] size-6"></span>Concurs</a></li>
                  <div class="divider"></div>  
             <li><a class="dropdown-item bg-error w-full" href="./PHP-Functions/logout.php" id="logout"><span class="icon-[tabler--login] size-6"></span>Log Out</a></li>

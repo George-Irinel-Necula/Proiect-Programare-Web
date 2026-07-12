@@ -10,7 +10,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
     rel="stylesheet">
-
+      <link rel="stylesheet" href="dist/assets/main.css">
+  <script src="dist/assets/main.js"></script>
 </head>
 
 <body data-theme="elixirul-tineretii">
@@ -112,7 +113,7 @@
         <p>Aici puteti explora diversele categorii de cosmetice pe care le oferim.</p>
         <div class="cards w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center mt-6">
           <div class="card image-full sm:max-w-sm">
-            <figure><img src="https://upload.cdn.baselinker.com/products/1002169/7091af6e371a751fd94b638fe665cb94.jpg"
+            <figure><img src="https://i.ytimg.com/vi/RkbNpn5dV_Y/maxresdefault.jpg"
                 alt="" /></figure>
             <div class="card-body pt-24">
               <h2 class="card-title mb-2.5 ">Machiaj</h2>
